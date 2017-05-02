@@ -1,23 +1,21 @@
-As a time-pressed user
-So that I can quickly go to web sites I regularly visit
-I would like to see a list of links on the homepage
+# Bookmark Manager
+## Week 4, Makers Academy
 
-As a time-pressed user
-So that I can quickly find web sites I recently bookmarked
-I would like to see links in descending chronological order
+## User stories
+```
+As a user,
+So I can access the bookmarks I've created,
+I want to be able to view a list of all of my bookmarks.
 
-As a time-pressed user
-So that I can save a website
-I would like to add the site's address and title to my bookmark manager
+As a user,
+So I can find the information I need from a bookmark later,
+I want to add new bookmarks to my personal list.
 
-As a time-pressed user
-So that I can organise my many links into different categories for ease of search
-I would like to add tags to the links in my bookmark manager
+As a user,
+So I can organise my bookmarks by topic,
+I want to be able to tag bookmarks with a relevant word.
 
-As a time-pressed user
-So that I can quickly find links on a particular topic
-I would like to filter links by tag
-
-one tagging class
-bookmark class
-viewer:/ filter/ print
+As a user,
+So I can find a specific bookmark more easily,
+I want to return a filtered list of my bookmarks using a tag.
+```

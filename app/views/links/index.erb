@@ -1,6 +1,12 @@
 <html>
 <body>
-  Hello! These are the links:
-  <%= @links %>
-</body>
-</html>
+<h1> Links </h1>
+
+<ul id='links'>
+  <% @links.each do |link| %>
+  <li>
+    Title: <%= link.title %>
+    URL:   <%= link.url %>
+  </li>
+  <% end %>
+</ul>

@@ -1,15 +1,9 @@
 require './app/app.rb'
 
-feature 'List of web sites'do
-scenario 'A list of links on my homepage' do
-  visit('/')
-    expect(Link.where(title: "Google")).to be_present
-  end
-end
-
-feature 'List of web sites'do
-scenario 'An empty list of links on my homepage' do
-  visit('/')
-    expect(Link.where(title: "Google")).to be_present
+feature 'On the homepage, there should be a list of links' do
+  scenario 'The homepage should load and contain links' do
+    Link.create(url: 'www.cats.com', title: 'Cats')
+    visit '/links'
+    expect(page).to have_content 'Cats'
   end
 end
