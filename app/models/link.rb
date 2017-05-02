@@ -1,13 +1,13 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
 
+## This class understands how to add links to our bookmark manager database
 class Link
   include DataMapper::Resource
 
-  property :id, Serial
-  property :title, String
-  property :url, String
-  # property :tag, String
+  property :id,     Serial
+  property :title,  String
+  property :url,    String
 end
 
 DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
