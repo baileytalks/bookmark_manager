@@ -1,7 +1,7 @@
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
-require_relative 'models/link.rb'
+require_relative 'data_mapper_setup'
 
 ## This class understands how to run the Bookmark Manager app
 class BookmarkManager < Sinatra::Base
@@ -15,7 +15,10 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/links' do
-    @new_link = Link.create(title: params[:title], url: params[:url])
+    link = Link.new(title: params[:title], url: params[:url])
+    tag  = Tag.first_or_create(tag_name: params[:tag])
+    link.tags << tag
+    link.save
     redirect to('/links')
   end
 end
