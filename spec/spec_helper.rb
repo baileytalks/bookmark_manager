@@ -6,6 +6,7 @@ require 'dm-rspec'
 require 'capybara/rspec'
 require 'capybara'
 require 'rspec'
+require 'database_cleaner'
 
 Capybara.app = BookmarkManager
 
@@ -29,6 +30,20 @@ Capybara.app = BookmarkManager
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 RSpec.configure do |config|
+
+  config.before(:suite) do
+   DatabaseCleaner.strategy = :transaction
+   DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
   config.include(DataMapper::Matchers)
 
   # rspec-expectations config goes here. You can use an alternate

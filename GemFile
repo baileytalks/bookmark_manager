@@ -1,14 +1,17 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
 ruby '2.4.0'
 
 gem 'rake'
 gem 'sinatra'
 
-gem 'capybara'
-gem 'rspec'
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'rspec'
+end
 # gem 'capybara/rspec'
-gem 'selenium-webdriver'
+# gem 'selenium-webdriver'
 
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
