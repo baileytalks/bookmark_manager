@@ -23,6 +23,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/tags/:tag_name' do
-    "Test"
+    @tag = :tag_name
+    @tagged_links = Link.all(:tag_name = @tag)
+    erb :'tags'
   end
 end
