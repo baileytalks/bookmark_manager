@@ -21,4 +21,8 @@ class BookmarkManager < Sinatra::Base
     link.save
     redirect to('/links')
   end
+
+  get '/tags/:tag_name' do
+    "Test"
+  end
 end
