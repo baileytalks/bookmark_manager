@@ -1,6 +1,7 @@
 require './app/app.rb'
+require_relative 'web_helpers'
 
-feature 'Allow users to submit a new link' do
+feature 'Creating links' do
   scenario 'Use a form to submit a new link' do
     create_one_link_about_cats
     expect(page).to have_content 'cats.com'

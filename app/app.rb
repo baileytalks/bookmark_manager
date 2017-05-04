@@ -23,9 +23,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/tags/:tag_name' do
-    @tag = params[:tag_name]
-    tag_rows = Tag.all(:tag_name => @tag)
-    @tagged_links = tag_rows.links
-    erb :'tags/tags'
+    tag = Tag.first(tag_name: params[:tag_name])
+    @links = tag ? tag.links : []
+    erb :'links/index'
   end
 end
