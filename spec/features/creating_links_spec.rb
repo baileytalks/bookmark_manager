@@ -10,6 +10,12 @@ feature 'Creating links' do
   scenario 'Allow users to add a tag to a link' do
     create_one_link_about_cats
     link = Link.first
-    expect(link.tags.map(&:tag_name)).to include('pets')
+    expect(link.tags.map(&:tag)).to include('pets')
+  end
+
+  scenario 'Allow users to add two tags to a link' do
+    create_one_link_with_two_tags
+    link = Link.first
+    expect(link.tags.map(&:tag)).to include('pets')
   end
 end
