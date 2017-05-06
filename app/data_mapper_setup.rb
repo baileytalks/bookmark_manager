@@ -3,6 +3,7 @@ require 'dm-postgres-adapter'
 
 require_relative 'models/tag'
 require_relative 'models/link'
+require_relative 'models/user'
 
 DataMapper::Logger.new(STDOUT, :debug) if ENV['RACK_ENV'] == 'development'
 DataMapper.setup(:default, ENV['DATABASE_URL'] ||

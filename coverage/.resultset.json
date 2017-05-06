@@ -31,6 +31,7 @@
         2,
         2,
         2,
+        2,
         null,
         null,
         1,
@@ -39,6 +40,40 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        null
+      ],
+      "/Users/baileykursar/Projects/week_4/bookmark_manager/spec/features/user_signup_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        4,
+        null,
         null
       ],
       "/Users/baileykursar/Projects/week_4/bookmark_manager/spec/features/viewing_links_spec.rb": [
@@ -68,7 +103,6 @@
         null,
         1,
         1,
-        null,
         1,
         null,
         1,
@@ -81,6 +115,6 @@
         null
       ]
     },
-    "timestamp": 1493988813
+    "timestamp": 1494063389
   }
 }

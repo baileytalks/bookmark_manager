@@ -1,0 +1,16 @@
+require 'bcrypt'
+
+## This class understands what a user is and creates a them
+class User
+  include DataMapper::Resource
+
+  has n, :links, through: Resource
+
+  property :id,     Serial
+  property :email,  String
+  property :password_digest, Text
+
+  def password=(password)
+    self.password_digest = BCrypt::Password.create(password)
+  end
+end

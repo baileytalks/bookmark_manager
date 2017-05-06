@@ -1,5 +1,7 @@
-<html>
-<body>
+<% if current_user %>
+  Welcome, <%= current_user.email %>
+<% end %>
+
 <h1> Links </h1>
 
 <ul id='links'>
@@ -10,5 +12,3 @@
   </li>
   <% end %>
 </ul>
-</body>
-</html>
